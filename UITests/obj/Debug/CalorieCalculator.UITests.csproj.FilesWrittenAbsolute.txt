@@ -1,0 +1,7 @@
+/Users/oswins/Projects/CalorieCalculator/UITests/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/oswins/Projects/CalorieCalculator/UITests/bin/Debug/CalorieCalculator.UITests.dll.mdb
+/Users/oswins/Projects/CalorieCalculator/UITests/bin/Debug/CalorieCalculator.UITests.dll
+/Users/oswins/Projects/CalorieCalculator/UITests/obj/Debug/CalorieCalculator.UITests.dll
+/Users/oswins/Projects/CalorieCalculator/UITests/obj/Debug/CalorieCalculator.UITests.dll.mdb
+/Users/oswins/Projects/CalorieCalculator/UITests/bin/Debug/nunit.framework.dll
+/Users/oswins/Projects/CalorieCalculator/UITests/bin/Debug/Xamarin.UITest.dll

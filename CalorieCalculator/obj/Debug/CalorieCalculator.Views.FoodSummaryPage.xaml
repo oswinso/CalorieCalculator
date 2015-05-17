@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+						xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+						x:Class="CalorieCalculator.FoodSummaryPage"
+			 Title="{Binding Name}"
+			 Padding="30">
+	<StackLayout Spacing="10" VerticalOptions="FillAndExpand">
+		<Label Text="Name" TextColor = "Blue"/>
+		<Label Text="{Binding Name}" />
+		<Label Text="Calories" TextColor = "Blue"/>
+		<Label Text="{Binding Calories}" />
+		<Label Text="Total Fat" TextColor = "Blue"/>
+		<Label Text="{Binding TotalFat}" />
+		<Label Text="Cholesterol" TextColor = "Blue"/>
+		<Label Text="{Binding Cholesterol}" />
+		<Button Text="Add to Today's Food" Clicked="OnButtonClick"/>
+	</StackLayout>
+</ContentPage>
