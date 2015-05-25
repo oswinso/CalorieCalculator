@@ -1,0 +1,17 @@
+﻿<Properties StartupItem="CalorieCaculator/CalorieCaculator.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CalorieCaculator/SearchByNameActivity.cs">
+    <Files>
+      <File FileName="CalorieCaculator/Utility.cs" Line="1" Column="1" />
+      <File FileName="CalorieCaculator/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="CalorieCaculator/SearchByActivity.cs" Line="1" Column="1" />
+      <File FileName="CalorieCaculator/SearchByNameActivity.cs" Line="81" Column="50" />
+      <File FileName="CalorieCaculator/Resources/values/Strings.xml" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.CalorieCaculator AndroidDesignerPreferredDevice="Nexus 4" />
+</Properties>
