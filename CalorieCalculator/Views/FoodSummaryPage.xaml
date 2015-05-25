@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+						xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+						x:Class="CalorieCalculator.FoodSummaryPage"
+			 Title="{Binding Name}"
+			 Padding="30">
+	<StackLayout Spacing="10" VerticalOptions="FillAndExpand">
+		<Label Text="{Binding Name}" />
+		<StackLayout Orientation="Horizontal">
+			<Label Text="Quantity" VerticalOptions="CenterAndExpand"/>
+			<Picker x:Name="QuantityPicker" SelectedIndex="{Binding QuantityIndex}" HorizontalOptions="EndAndExpand"/>
+		</StackLayout>
+		<StackLayout Orientation="Horizontal">
+			<Label Text="Serving Size" VerticalOptions="CenterAndExpand"/>
+			<Picker x:Name="MeasurementPicker" SelectedIndex="{Binding MeasurementIndex}" HorizontalOptions="EndAndExpand"/>
+		</StackLayout>
+
+		<Label Text="Nutritional Information" />
+		<Label Text="Calories" TextColor = "Blue"/>
+		<Label Text="{Binding Calories}" />
+		<Label Text="Total Fat" TextColor = "Blue"/>
+		<Label Text="{Binding TotalFat}" />
+		<Label Text="Cholesterol" TextColor = "Blue"/>
+		<Label Text="{Binding Cholesterol}" />
+		<StackLayout Orientation="Horizontal">
+			<Button x:Name="SaveButton" Text="Save Changes" Clicked="OnSaveButtonClick" HorizontalOptions="Center" />
+			<Button Text="{Binding ButtonName}" Clicked="OnButtonClick" HorizontalOptions="Center"/>
+		</StackLayout>
+
+	</StackLayout>
+</ContentPage>

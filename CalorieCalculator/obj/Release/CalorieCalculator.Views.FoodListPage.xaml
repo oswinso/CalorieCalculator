@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+						xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+						x:Class="CalorieCalculator.FoodListPage"
+			  Title="Foods">
+	<StackLayout>
+		<StackLayout>
+			<Label Text="Food Group: " />
+			<Picker x:Name="picker" SelectedIndexChanged="OnSelectedIndexChanged" SelectedIndex="{Binding Index}"/>
+		</StackLayout>
+		<Entry Placeholder="Search For Food"
+				Text="{Binding Path=SearchText}"
+				TextChanged="OnValueChanged" />
+		<ListView x:Name="foodList" ItemsSource="{Binding Foods}" ItemTapped="OnItemSelected">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<TextCell Text="{Binding Name}" />
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
+	</StackLayout>
+</ContentPage>
