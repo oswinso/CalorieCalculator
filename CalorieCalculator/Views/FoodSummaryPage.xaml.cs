@@ -37,7 +37,7 @@ namespace CalorieCalculator
 
 		public void OnButtonClick(object sender, EventArgs args) {
 			if (recordID == -1) {
-				App.RecordDB.AddRecord (viewmodel.id, viewmodel.Name, viewmodel.MeasurementIndex, viewmodel.QuantityIndex+1, meal, viewmodel.Calories);
+				App.RecordDB.AddRecord (viewmodel.ID, viewmodel.Name, viewmodel.MeasurementIndex, viewmodel.QuantityIndex+1, meal, viewmodel.Calories);
 			} else {
 				App.RecordDB.DeleteRecord (recordID);
 			}
@@ -45,7 +45,7 @@ namespace CalorieCalculator
 		}
 
 		public void OnSaveButtonClick(object sender, EventArgs args) {
-			App.RecordDB.UpdateRecord (recordID, viewmodel.id, viewmodel.Name, viewmodel.MeasurementIndex, viewmodel.QuantityIndex+1, meal, viewmodel.Calories);
+			App.RecordDB.UpdateRecord (recordID, viewmodel.ID, viewmodel.Name, viewmodel.MeasurementIndex, viewmodel.QuantityIndex+1, meal, viewmodel.Calories);
 			Navigation.PopToRootAsync ();
 		}
 

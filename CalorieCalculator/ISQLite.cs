@@ -8,4 +8,3 @@ namespace CalorieCalculator
 		SQLiteConnection GetConnection();
 	}
 }
-

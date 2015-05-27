@@ -11,7 +11,7 @@ namespace CalorieCalculator
 		public DayPage ()
 		{
 			InitializeComponent ();
-			viewmodel = new DayViewModel();
+			this.viewmodel = new DayViewModel();
 			this.BindingContext = viewmodel;
 		}
 

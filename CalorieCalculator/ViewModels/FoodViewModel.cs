@@ -5,91 +5,138 @@ namespace CalorieCalculator
 {
 	public class FoodViewModel : INotifyPropertyChanged
 	{
-		private Food _food;
-		private int _quantityindex;
-		private int _measurementindex;
+		private Food food;
+		private int quantityIndex;
+		private int measurementIndex;
+
 		public event PropertyChangedEventHandler PropertyChanged;
+
 		public string ButtonName { get; set; }
 
-		public FoodViewModel ( Food food )
+		public FoodViewModel(Food food)
 		{
-			this._food = food;
+			this.food = food;
 		}
 
-		protected virtual void OnPropertyChanged(string propertyName) {
-			if (PropertyChanged != null) {
-				PropertyChanged ( this, new PropertyChangedEventArgs (propertyName) );
+		public int ID
+		{
+			get
+			{
+				return this.food.id;
 			}
-		}
 
-		public int id
-		{
-			get { return this._food.id; }
-			set {
-				if (_food != null)
+			set
+			{
+				if (this.food != null)
 				{
-					this._food.id = value;
-					OnPropertyChanged ("id");
+					this.food.id = value;
+					this.OnPropertyChanged("id");
 				}
 			}
 		}
 
-		public string Name {
-			get { return _food != null ? _food.Name : null; }
-			set {
-				if (_food != null) {
-					_food.Name = value;
-					OnPropertyChanged ("Name");
+		public string Name
+		{
+			get
+			{
+				return this.food != null ? this.food.Name : null;
+			}
+
+			set
+			{
+				if (this.food != null)
+				{
+					this.food.Name = value;
+					this.OnPropertyChanged("Name");
 				}
 			}
 		}
 
-		public int Calories {
-			get { return _food.Calories; }
-			set {
-				if (_food != null) {
-					_food.Calories = value;
-					OnPropertyChanged ("Calories");
+		public int Calories
+		{
+			get
+			{
+				return this.food.Calories;
+			}
+
+			set
+			{
+				if (this.food != null)
+				{
+					this.food.Calories = value;
+					this.OnPropertyChanged("Calories");
 				}
 			}
 		}
 
-		public string TotalFat {
-			get { return _food != null ? _food.TotalFat.ToString() : "None"; }
-			set {
-				if (_food != null) {
-					_food.TotalFat = float.Parse(value);
-					OnPropertyChanged ("TotalFat");
+		public string TotalFat
+		{
+			get
+			{
+				return this.food != null ? this.food.TotalFat.ToString() : "None";
+			}
+
+			set
+			{
+				if (this.food != null)
+				{
+					this.food.TotalFat = float.Parse(value);
+					this.OnPropertyChanged("TotalFat");
 				}
 			}
 		}
 
-		public string Cholesterol {
-			get { return _food != null ? _food.Cholesterol.ToString() : "None"; }
-			set {
-				if (_food != null) {
-					_food.Cholesterol = float.Parse(value);
-					OnPropertyChanged ("Cholesterol");
+		public string Cholesterol
+		{
+			get
+			{
+				return this.food != null ? this.food.Cholesterol.ToString() : "None";
+			}
+
+			set
+			{
+				if (this.food != null)
+				{
+					this.food.Cholesterol = float.Parse(value);
+					this.OnPropertyChanged("Cholesterol");
 				}
 			}
 		}
 
-		public int QuantityIndex {
-			get { return _quantityindex; }
-			set {
-				_quantityindex = value;
-				OnPropertyChanged ("QuantityIndex");
+		public int QuantityIndex
+		{
+			get
+			{
+				return this.quantityIndex;
+			}
+
+			set
+			{
+				this.quantityIndex = value;
+				this.OnPropertyChanged("QuantityIndex");
 			}
 		}
 
-		public int MeasurementIndex {
-			get { return _measurementindex; }
-			set {
-				_measurementindex = value;
-				OnPropertyChanged ("MeasurementIndex");
+		public int MeasurementIndex
+		{
+			get
+			{
+				return this.measurementIndex;
+			}
+
+			set
+			{
+				this.measurementIndex = value;
+				this.OnPropertyChanged("MeasurementIndex");
 			}
 		}
 
+		protected virtual void OnPropertyChanged(string propertyName)
+		{
+			if (this.PropertyChanged != null)
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
 	}
 }
-
